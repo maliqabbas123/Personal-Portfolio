@@ -48,42 +48,53 @@ export type Project = {
   title: string;
   description: string;
   tags: string[];
-  github: string;
-  demo: string;
+  status?: string;
+  github?: string;
+  demo?: string;
 };
 
 export const projects: Project[] = [
   {
-    title: "AI Finance Assistant",
+    title: "Medial AI Finance Assistant",
     description:
-      "A practical assistant concept for finance workflows, combining retrieval, reasoning, and clean user-facing reporting.",
-    tags: ["Next.js", "LangGraph", "RAG", "PostgreSQL"],
-    github: "#",
-    demo: "#",
+      "An AI-powered finance assistant built around Xero data, designed to answer business questions, generate reports, and guide users through financial reasoning workflows.",
+    tags: ["LangGraph", "FastAPI", "PostgreSQL", "Xero", "Azure"],
+    status: "Private / Case Study",
   },
   {
-    title: "LangGraph Workflow Engine",
+    title: "LangGraph Chatbot Workflow",
     description:
-      "A modular workflow system for orchestrating AI agents, state transitions, human review, and tool execution.",
-    tags: ["Python", "LangGraph", "FastAPI", "Agents"],
-    github: "#",
-    demo: "#",
+      "A structured chatbot pipeline using query classification, context resolution, business entity matching, SQL generation, validation, execution, and final answer formatting.",
+    tags: ["LangGraph", "LangChain", "LLM", "SQL", "RAG"],
+    status: "Private / Case Study",
   },
   {
-    title: "FastAPI SaaS Backend",
+    title: "AI Reporting & Account Review System",
     description:
-      "A production-style backend foundation with auth-ready APIs, database migrations, validation, and service boundaries.",
-    tags: ["FastAPI", "SQLAlchemy", "Alembic", "Pydantic"],
-    github: "#",
-    demo: "#",
+      "Report generation workflows for AI charts, flux analysis, account review, and management reporting with validation, reusable backend modules, and frontend form flows.",
+    tags: ["FastAPI", "React", "Reports", "PostgreSQL", "Azure"],
+    status: "Private / Case Study",
   },
   {
-    title: "React Dashboard System",
+    title: "Full Stack SaaS Architecture",
     description:
-      "A responsive dashboard interface for data-heavy products, focused on clean interaction patterns and reusable UI.",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Charts"],
-    github: "#",
-    demo: "#",
+      "Backend and frontend architecture work across authentication, billing, file storage, profile media, deployment, and clean service boundaries for scalable product development.",
+    tags: ["Next.js", "FastAPI", "Stripe", "Azure Blob", "GitHub Actions"],
+    status: "Private / Case Study",
+  },
+  {
+    title: "Developer Workflow & Automation",
+    description:
+      "Automation and integration work involving GitHub Actions, Azure deployments, webhook handling, background jobs, cron workflows, and developer experience improvements.",
+    tags: ["CI/CD", "Azure", "Webhooks", "Docker", "Linux"],
+    status: "Private / Case Study",
+  },
+  {
+    title: "Frontend Product Interfaces",
+    description:
+      "Modern frontend work across dashboards, chat interfaces, documents pages, billing flows, forms, modals, dropdowns, markdown rendering, and responsive product UI.",
+    tags: ["React", "Next.js", "Vue", "Tailwind", "TypeScript"],
+    status: "Public / In Progress",
   },
 ];
 
@@ -97,37 +108,45 @@ export type TimelineItem = {
 export const timeline: TimelineItem[] = [
   {
     role: "Software Engineer",
-    label: "Product-focused engineering",
+    label: "Full Stack & AI Product Engineering",
     description:
-      "Building maintainable software across frontend, backend, data, cloud, and AI-powered workflows.",
+      "Building product features across frontend, backend, data, cloud, and AI-powered workflows.",
     points: [
-      "Full stack development with modern web frameworks",
-      "Backend systems designed around clear APIs and data models",
-      "AI chatbot workflows with practical product constraints",
-    ],
-  },
-  {
-    role: "Full Stack Development",
-    label: "Web, APIs, and databases",
-    description:
-      "Turning product ideas into usable applications with a focus on reliability, clarity, and iteration speed.",
-    points: [
-      "Frontend interfaces built with React, Next.js, and TypeScript",
-      "FastAPI and Node.js services for application logic",
-      "PostgreSQL-backed systems with migrations and clean schema design",
+      "Built and improved full stack product flows using React, Next.js, FastAPI, and PostgreSQL",
+      "Worked on AI chatbot systems involving LangGraph, SQL generation, validation, and response formatting",
+      "Improved maintainability through modular backend structure, reusable services, and clearer boundaries",
     ],
   },
   {
     role: "AI Workflow Engineering",
-    label: "LLM systems and automation",
+    label: "LangGraph, RAG & Finance Reasoning",
     description:
-      "Exploring agentic workflows, retrieval systems, and structured LLM applications that solve concrete problems.",
+      "Designed structured LLM workflows for business data queries and finance-related assistant behavior.",
     points: [
-      "LangGraph workflows for multi-step AI processes",
-      "RAG patterns for grounded responses",
-      "Prompt and tool design for dependable AI features",
+      "Worked on query classification, context resolution, clarification handling, and entity matching",
+      "Integrated LLM workflows with database-backed execution and reporting features",
+      "Focused on safe, grounded, and understandable AI responses instead of generic chatbot behavior",
     ],
   },
+  {
+    role: "Backend Systems",
+    label: "APIs, Data Models & Cloud",
+    description:
+      "Built backend systems that support product workflows, integrations, storage, billing, and deployment.",
+    points: [
+      "Worked with FastAPI, SQLAlchemy, Alembic, PostgreSQL, Azure Blob Storage, and background jobs",
+      "Implemented webhook-driven workflows, scheduled jobs, and deployment improvements",
+      "Focused on reliable APIs, clean schema design, and production-oriented engineering decisions",
+    ],
+  },
+];
+
+export const currentlyImproving = [
+  "Public project polish",
+  "System design",
+  "AI engineering",
+  "Backend architecture",
+  "Technical writing",
 ];
 
 export const contactLinks = [

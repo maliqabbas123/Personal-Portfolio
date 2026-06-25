@@ -1,4 +1,4 @@
-import { timeline } from "@/lib/data";
+import { currentlyImproving, timeline } from "@/lib/data";
 import { Section } from "./section";
 
 export function Experience() {
@@ -6,8 +6,8 @@ export function Experience() {
     <Section
       id="experience"
       eyebrow="Work"
-      title="A flexible timeline for the work you will edit next."
-      description="Generic for now, with enough structure to describe roles, systems, AI workflows, and product engineering."
+      title="Engineering work shaped by real product problems."
+      description="A focused view of the full stack, AI workflow, and backend systems work behind the projects above."
     >
       <div className="relative">
         <div className="absolute left-4 top-0 hidden h-full w-px bg-gradient-to-b from-cyan-300/50 via-white/10 to-transparent md:block" />
@@ -31,6 +31,22 @@ export function Experience() {
                 ))}
               </ul>
             </article>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.035] p-5 md:ml-12">
+        <p className="text-sm font-medium uppercase tracking-[0.18em] text-cyan-300/80">
+          Currently improving
+        </p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {currentlyImproving.map((item) => (
+            <span
+              key={item}
+              className="rounded-full border border-white/10 bg-zinc-950/60 px-3 py-1 text-sm text-zinc-300"
+            >
+              {item}
+            </span>
           ))}
         </div>
       </div>
