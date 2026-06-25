@@ -3,21 +3,46 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #05070a;
+  --foreground: #f8fafc;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(34, 211, 238, 0.16), transparent 34rem),
+    radial-gradient(circle at 80% 12%, rgba(99, 102, 241, 0.12), transparent 30rem),
+    linear-gradient(180deg, #05070a 0%, #090b10 48%, #05070a 100%);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+body::before {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  content: "";
+  inset: 0;
+  mask-image: linear-gradient(to bottom, black, transparent 72%);
+  pointer-events: none;
+  position: fixed;
+  z-index: -1;
+}
+
+::selection {
+  background: rgba(103, 232, 249, 0.28);
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
 }
 
 @layer utilities {
