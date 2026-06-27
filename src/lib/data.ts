@@ -55,6 +55,22 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "SalesVision",
+    description:
+      "A full-stack sales analytics dashboard with KPI cards, revenue trends, category breakdowns, top products, recent orders, filters, and an optional natural-language query endpoint.",
+    tags: ["Next.js", "FastAPI", "PostgreSQL", "TanStack Query", "Recharts"],
+    status: "Public Project",
+    github: "https://github.com/maliqabbas123/SalesVision",
+  },
+  {
+    title: "Personal Portfolio",
+    description:
+      "A modern developer portfolio built with Next.js, TypeScript, Tailwind CSS, reusable components, and structured content sections for projects, skills, work, philosophy, and contact.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Portfolio"],
+    status: "Public Project",
+    github: "https://github.com/maliqabbas123/Personal-Portfolio",
+  },
+  {
     title: "Medial AI Finance Assistant",
     description:
       "An AI-powered finance assistant built around Xero data, designed to answer business questions, generate reports, and guide users through financial reasoning workflows.",
@@ -81,20 +97,6 @@ export const projects: Project[] = [
       "Backend and frontend architecture work across authentication, billing, file storage, profile media, deployment, and clean service boundaries for scalable product development.",
     tags: ["Next.js", "FastAPI", "Stripe", "Azure Blob", "GitHub Actions"],
     status: "Private / Case Study",
-  },
-  {
-    title: "Developer Workflow & Automation",
-    description:
-      "Automation and integration work involving GitHub Actions, Azure deployments, webhook handling, background jobs, cron workflows, and developer experience improvements.",
-    tags: ["CI/CD", "Azure", "Webhooks", "Docker", "Linux"],
-    status: "Private / Case Study",
-  },
-  {
-    title: "Frontend Product Interfaces",
-    description:
-      "Modern frontend work across dashboards, chat interfaces, documents pages, billing flows, forms, modals, dropdowns, markdown rendering, and responsive product UI.",
-    tags: ["React", "Next.js", "Vue", "Tailwind", "TypeScript"],
-    status: "Public / In Progress",
   },
 ];
 

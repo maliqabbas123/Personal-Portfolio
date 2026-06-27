@@ -9,15 +9,19 @@ export function Experience() {
       title="Engineering work shaped by real product problems."
       description="A focused view of the full stack, AI workflow, and backend systems work behind the projects above."
     >
-      <div className="relative">
-        <div className="absolute left-4 top-0 hidden h-full w-px bg-gradient-to-b from-cyan-300/50 via-white/10 to-transparent md:block" />
-        <div className="space-y-5">
-          {timeline.map((item) => (
-            <article
-              key={item.role}
-              className="relative rounded-2xl border border-white/10 bg-zinc-950/60 p-6 md:ml-12"
-            >
-              <span className="absolute -left-[3.2rem] top-7 hidden h-3 w-3 rounded-full bg-cyan-300 shadow-[0_0_0_6px_rgba(34,211,238,0.12)] md:block" />
+      <div className="space-y-5">
+        {timeline.map((item, index) => (
+          <div key={item.role} className="grid gap-4 md:grid-cols-[2rem_1fr] md:gap-0">
+            <div className="relative hidden md:flex md:justify-center">
+              <div
+                className={`absolute left-1/2 w-px -translate-x-1/2 bg-white/10 ${
+                  index === 0 ? "top-7" : "top-0"
+                } ${index === timeline.length - 1 ? "h-7" : "h-[calc(100%+1.25rem)]"}`}
+              />
+              <span className="relative top-7 z-10 h-3 w-3 rounded-full bg-cyan-300 shadow-[0_0_0_6px_rgba(34,211,238,0.12)]" />
+            </div>
+
+            <article className="rounded-2xl border border-white/10 bg-zinc-950/60 p-6 md:ml-4">
               <p className="text-sm font-medium uppercase tracking-[0.18em] text-cyan-300/80">
                 {item.label}
               </p>
@@ -31,8 +35,8 @@ export function Experience() {
                 ))}
               </ul>
             </article>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
 
       <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.035] p-5 md:ml-12">

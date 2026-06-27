@@ -11,8 +11,8 @@ export function Projects() {
     <Section
       id="projects"
       eyebrow="Projects"
-      title="Selected projects and engineering work."
-      description="A few examples of the systems, workflows, and product features I have worked on across full stack development, AI, backend architecture, and data-driven applications."
+      title="Selected projects and case studies."
+      description="Public projects and private case studies showing my work across full-stack development, backend systems, AI workflows, and product engineering."
       className="border-y border-white/8 bg-white/[0.02]"
     >
       <div className="grid gap-5 md:grid-cols-2">
